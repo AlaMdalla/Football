@@ -1,0 +1,75 @@
+/*news titlr*/
+
+.divzs {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.divzs h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e41824; 
+    border-bottom: 2px solid #e41824; 
+    padding-bottom: 10px; 
+}
+/*end*/
+.homepage-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.item img, .item video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Enlarge item on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.item .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(252, 241, 241, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover .description {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background on hover */
+}
+
+.item .description h2 {
+    margin-bottom: 5px;
+    font-size: 0.4em;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+}
+
+.item .description p {
+    margin: 0;
+}
+
+/* Football-themed styles */
+.item img, .item video {
+    filter: grayscale(20%); /* Add grayscale effect to images */
+}
+
+.item:hover img, .item:hover video {
+    filter: grayscale(0%); /* Remove grayscale effect on hover */
+}
